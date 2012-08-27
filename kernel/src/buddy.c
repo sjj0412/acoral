@@ -437,6 +437,6 @@ static void list_add(int cur, int level){
 }
 
 static int list_is_empty(int cur, int level){
-    return acoral_mem_ctrl->free_list[level][cur].next == acoral_mem_ctrl->free_list[level][cur].prev && \
+    return acoral_mem_ctrl->free_list[level][cur].next == cur && \
 			acoral_mem_ctrl->free_cur[level] != cur;
 }

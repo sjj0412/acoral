@@ -80,8 +80,9 @@ subdir-y=hal kernel lib plugin user
 subdir-$(CFG_DRIVER)+=driver
 subdir-$(CFG_BSP)+=bsp
 subdir-$(CFG_TEST)+=test
-choose:
+devices:
 	tools/scripts/buildTool tools/configs/
+	@make clean >/dev/null
 	
 acoral:include/autocfg.h first_rule $(CORE_FILES)
 	@echo "###System Configure###"
